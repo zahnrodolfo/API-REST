@@ -16,7 +16,7 @@ Para Fazer a api funcionar é necessário:
 - Rodar o composer install na pasta root do projeto
 - Configurar o .env (para esta api foi utilizado o MySQL como SGBD)
 - Rodar php artisan:migrate --seed. São duas migrations simples que servem apenas de exemplo e já tem alguns dados que serão inseridos com o --seed
-- Rodar php artisan make:auth. Faz o sistema de login e registro de novos usuários funcionar.
+- Rodar php artisan make:auth. Faz o sistema de login e registro de novos usuários funcionar
 
 Foram utilizados 2 pacotes:
 
@@ -27,10 +27,10 @@ Para a configuração dos dois basta seguir as instruções dos links disponibil
 
 Depois de configurar tudo, crie um novo usuário no sistema e acesse a url http://localhost:8000/oauth/token via POST enviando os seguintes parametros:
 
-- grant_type: password.
-- client_id: id gerado pelo passport, geralmente ele gera 2 se um não estiver funcionando teste o outro.
-- client_secret: tambem gerado pelo passport.
-- username: email do usuario que voce criou.
+- grant_type: password
+- client_id: id gerado pelo passport, geralmente ele gera 2 se um não estiver funcionando teste o outro
+- client_secret: tambem gerado pelo passport
+- username: email do usuario que voce criou
 - password: senha do usuario
 
 Esta url vai te retornar um token, guarde-o pois é com ele que você vai conseguir fazer os requests para a API.
@@ -41,3 +41,5 @@ As seguintes urls ficam disponíveis para teste:
 
 - http://localhost:8000/api/banks
 - http://localhost:8000/api/accounts
+
+Para fazer o acesso de outros computadores na mesma rede que está seu servidor basta usa php artisan serve --host 0.0.0.0 --port 8000 e acessar pelo IP do servidor http://ipdoservidor:8000/api/banks por exemplo. 
