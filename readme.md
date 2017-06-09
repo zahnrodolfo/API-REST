@@ -15,7 +15,7 @@ Para Fazer a api funcionar é necessário:
 - Clonar o projeto
 - Rodar o composer install na pasta root do projeto
 - Configurar o .env (para esta api foi utilizado o MySQL como SGBD)
-- Rodar php artisan:migrate --seed. São duas migrations simples que servem apenas de exemplo e já tem alguns dados que serão inseridos com o --seed
+- Rodar php artisan migrate --seed. São duas migrations simples que servem apenas de exemplo e já tem alguns dados que serão inseridos com o --seed
 - Rodar php artisan make:auth. Faz o sistema de login e registro de novos usuários funcionar
 
 Foram utilizados 2 pacotes:
